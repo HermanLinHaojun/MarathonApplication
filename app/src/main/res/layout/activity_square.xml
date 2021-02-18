@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设定起始点"></Button>
+        <Button
+            android:id="@+id/center_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设定中间点"></Button>
+        <Button
+            android:id="@+id/end_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设定终点"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/read_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读取"></Button>
+        <Button
+            android:id="@+id/write_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还原"></Button>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lengthTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></EditText>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="1000px"
+        android:id="@+id/map"
+        tools:context=".square.SquareActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+</LinearLayout>
