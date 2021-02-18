@@ -38,7 +38,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private LinearLayout mTab2;
     private LinearLayout mTab3;
 
-    //四个Tab对应的ImageButton
+    //four Tab ImageButton
     private ImageButton mImg1;
     private ImageButton mImg2;
     private ImageButton mImg3;
@@ -112,15 +112,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     // Initialize the controller
     private void initViews() {
-        mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+        mViewPager = findViewById(R.id.id_viewpager);
 
-        mTab1 = (LinearLayout) findViewById(R.id.id_tab1);
-        mTab2 = (LinearLayout) findViewById(R.id.id_tab2);
-        mTab3 = (LinearLayout) findViewById(R.id.id_tab3);
+        mTab1 =  findViewById(R.id.id_tab1);
+        mTab2 =  findViewById(R.id.id_tab2);
+        mTab3 =  findViewById(R.id.id_tab3);
 
-        mImg1 = (ImageButton) findViewById(R.id.id_tab_img1);
-        mImg2 = (ImageButton) findViewById(R.id.id_tab_img2);
-        mImg3 = (ImageButton) findViewById(R.id.id_tab_img3);
+        mImg1 =  findViewById(R.id.id_tab_img1);
+        mImg2 =  findViewById(R.id.id_tab_img2);
+        mImg3 =  findViewById(R.id.id_tab_img3);
         addRaceBtn = findViewById(R.id.add_race_btn);
     }
 
@@ -179,11 +179,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_add:
+        if(item.getItemId() == R.id.action_add){
                 Intent intent = new Intent(MainActivity.this, RaceInitActivity.class);
                 startActivity(intent);
-                break;
         }
         return super.onOptionsItemSelected(item);
     }
